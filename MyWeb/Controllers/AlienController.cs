@@ -18,22 +18,18 @@ namespace MyWeb.Controllers
         {
             return new string[] { "value1", "value2" };
         }
-
         // GET: api/Alien/5
         [HttpGet("{number}")]
         public AlienModel Get(string number)
         {
-            if (number=="A01")
+            if (AlienModelFakeDB._dictionary.ContainsKey(number))
             {
-                return new AlienModel()
-                {
-                Id=1,
-                Type = "梅沙火星人",
-                Name = "沼澤火",
-                };
+                return AlienModelFakeDB._dictionary[number];
             }
-
-            return null;
+            else
+            {
+                return null;
+            }
         }
 
         // POST: api/Alien

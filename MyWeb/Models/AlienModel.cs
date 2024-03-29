@@ -9,7 +9,7 @@ public class AlienModel
 
 public static class AlienModelFakeDB
 {
-    private static Dictionary<string, AlienModel> _dictionary = new Dictionary<string, AlienModel>();
+    public static Dictionary<string, AlienModel> _dictionary = new Dictionary<string, AlienModel>();
 
     static AlienModelFakeDB()
     {
@@ -30,7 +30,7 @@ public static class AlienModelFakeDB
             {
                 Id=3,
                 Type = "海空雙棲星人",
-                Name = "異形怪",
+                Name = "魟人",
             }
         );
         _dictionary.Add("A04",new AlienModel()
