@@ -57,8 +57,8 @@ public static class AlienModelFakeDB
             {
                 Id=6,
                 userdata = "A06",
-                Type = "納克佛吉星人",
-                Name = "寒冰幽靈",
+                Type = "瓦克斯薩瑞人",
+                Name = "神力暴龍",
             }
         );
         _dictionary.Add("A07",new AlienModel()
