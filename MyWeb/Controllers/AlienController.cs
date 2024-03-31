@@ -14,17 +14,21 @@ namespace MyWeb.Controllers
     {
         // GET: api/Alien
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<AlienModel> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new AlienModel[]
+            {
+                new AlienModel(){Id=1,userdata = "A01",Type = "梅沙火星人", Name = "沼澤火",}
+            };
+            
         }
         // GET: api/Alien/5
-        [HttpGet("{number}")]
-        public AlienModel Get(string number)
+        [HttpGet("userdata")]
+        public AlienModel Get(string userdata)
         {
-            if (AlienModelFakeDB._dictionary.ContainsKey(number))
+            if (AlienModelFakeDB._dictionary.ContainsKey(userdata))
             {
-                return AlienModelFakeDB._dictionary[number];
+                return AlienModelFakeDB._dictionary[userdata];
             }
             else
             {
