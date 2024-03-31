@@ -23,7 +23,7 @@ namespace MyWeb.Controllers
             
         }
         // GET: api/Alien/5
-        [HttpGet("userdata")]
+        [HttpGet("{userdata}")]
         public AlienModel Get(string userdata)
         {
             if (AlienModelFakeDB._dictionary.ContainsKey(userdata))
