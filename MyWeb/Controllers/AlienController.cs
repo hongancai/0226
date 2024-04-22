@@ -19,38 +19,27 @@ namespace MyWeb.Controllers
             return new AlienModel[]
             {
                 new AlienModel()
-                {
-                    Id=1,userdata = "A01",Type = "梅沙火星人", Name = "沼澤火", },    
+                {Id=1,userdata = "A01",Type = "梅沙火星人", Name = "沼澤火",},    
                 new AlienModel()
-                {
-                    Id=2,userdata = "A02",Type = "變形外星人", Name = "異形怪", },
+                {Id=2,userdata = "A02",Type = "變形外星人", Name = "異形怪",},
                 new AlienModel()
-                {
-                    Id=3,userdata = "A03",Type = "海空雙棲星人", Name = "魟人", },
+                {Id=3,userdata = "A03",Type = "海空雙棲星人", Name = "魟人",},
                 new AlienModel()
-                {
-                    Id=4,userdata = "A04",Type = "索諾波波星人", Name = "小波波", },
+                {Id=4,userdata = "A04",Type = "索諾波波星人", Name = "小波波",},
                 new AlienModel()
-                {
-                    Id=5,userdata = "A05",Type = "海蟹甲布洛卡特斯星人", Name = "蟹甲智多星", },
+                {Id=5,userdata = "A05",Type = "海蟹甲布洛卡特斯星人", Name = "蟹甲智多星",},
                 new AlienModel()
-                {
-                    Id=6,userdata = "A06",Type = "瓦克斯薩瑞人", Name = "神力暴龍", },
+                {Id=6,userdata = "A06",Type = "瓦克斯薩瑞人", Name = "神力暴龍",},
                 new AlienModel()
-                {
-                    Id=7,userdata = "A07",Type = "佩卓沙皮星人", Name = "水晶奇俠", },
+                {Id=7,userdata = "A07",Type = "佩卓沙皮星人", Name = "水晶奇俠",},
                 new AlienModel()
-                {
-                    Id=8,userdata = "A08",Type = "納克佛吉星人", Name = "寒冰幽靈", },
+                {Id=8,userdata = "A08",Type = "納克佛吉星人", Name = "寒冰幽靈",},
                 new AlienModel()
-                {
-                    Id=9,userdata = "A09",Type = "阿拉卡那星人", Name = "蜘蛛魔猴", },
+                {Id=9,userdata = "A09",Type = "阿拉卡那星人", Name = "蜘蛛魔猴",},
                 new AlienModel()
-                {
-                    Id=10,userdata = "A10",Type = "天外天神族", Name = "X超人", },
+                {Id=10,userdata = "A10",Type = "天外天神族", Name = "X超人",},
                 new AlienModel()
-                {
-                    Id=11,userdata = "A11",Type = "圖庫斯塔人", Name = "超巨人", },
+                {Id=11,userdata = "A11",Type = "圖庫斯塔人", Name = "超巨人",},
             };
             
         }
