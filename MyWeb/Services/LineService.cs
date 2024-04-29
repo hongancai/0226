@@ -12,6 +12,13 @@ public class LineService : ILineService
     {
         var result = null as List<ISendMessage>;
 
+        if (message == "原神")
+        {
+            result = new List<ISendMessage>
+            {
+                new TextMessage("不啟動!!!")
+            };
+        }
         result = new List<ISendMessage>
         {
             new TextMessage($"Receive a text event message \nchannelId={channelId}  \nuserId={userId}")
