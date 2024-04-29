@@ -18,6 +18,7 @@ public class LineService : ILineService
             {
                 new TextMessage("不啟動!!!")
             };
+            return result;
         }
         result = new List<ISendMessage>
         {
