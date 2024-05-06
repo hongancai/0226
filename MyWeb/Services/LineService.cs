@@ -12,16 +12,32 @@ public class LineService : ILineService
     {
         var result = null as List<ISendMessage>;
 
-        if (message == "原神")
+        if (message == "hi")
         {
             result = new List<ISendMessage>
             {
-                new TextMessage("不啟動!!!")
+                new TextMessage("hi")
             };
             return result;
         }
+
+        string[] imageUrl = new string[]
+        {
+            "https://i.imgur.com/NcaA71G.jpg",
+            "https://i.imgur.com/Pe7EGWZ.jpg",
+            "https://i.imgur.com/bbtdv2I.jpg",
+        };
+        Random rnd = new Random((int)DateTime.Now.TimeOfDay.TotalSeconds);
+        int index = rnd.Next(0,imageUrl.Length);
+
+        return new List<ISendMessage>
+        {
+            new ImageMessage(imageUrl[index],imageUrl[index],null),
+        };
+        
         result = new List<ISendMessage>
         {
+            new ImageMessage("https://i.imgur.com/NcaA71G.jpg","https://i.imgur.com/NcaA71G.jpg",null),
             new TextMessage($"Receive a text event message \nchannelId={channelId}  \nuserId={userId}")
         };
         return result;
