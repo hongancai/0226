@@ -1,48 +1,45 @@
 using System.Drawing;
 using Line.Messaging;
 using Line.Messaging.Webhooks;
+using MyWeb.Data;
 
 public class LineService : ILineService
 {
     public LineService()
     {
+        Dictionary<string, NPCitem> npcDict = new Dictionary<string, NPCitem>();
+        npcDict.Add("沼澤火",new NPCitem("https://i.imgur.com/cfsOyCP.jpg","你變身成了沼澤火"));
     }
 
     public async Task<List<ISendMessage>> ProcessTextEventMessageAsync(string channelId, string userId, string message)
     {
         var result = null as List<ISendMessage>;
 
-        if (message == "hi")
+        if (message == "啟動")
         {
             result = new List<ISendMessage>
             {
-                new TextMessage("hi")
+                new ImageMessage("https://i.imgur.com/EzqOIRS.jpeg","https://i.imgur.com/EzqOIRS.jpeg",null),
+                new TextMessage("啟動成功"),
+            };
+            return result;
+        }
+        if (message == "沼澤火")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/cfsOyCP.jpg","https://i.imgur.com/cfsOyCP.jpg",null),
+                new TextMessage("你變身成了沼澤火")
             };
             return result;
         }
 
-        string[] imageUrl = new string[]
-        {
-            "https://i.imgur.com/NcaA71G.jpg",
-            "https://i.imgur.com/Pe7EGWZ.jpg",
-            "https://i.imgur.com/bbtdv2I.jpg",
-        };
-        Random rnd = new Random((int)DateTime.Now.TimeOfDay.TotalSeconds);
-        int index = rnd.Next(0,imageUrl.Length);
-
-        return new List<ISendMessage>
-        {
-            new ImageMessage(imageUrl[index],imageUrl[index],null),
-        };
-        
         result = new List<ISendMessage>
         {
-            new ImageMessage("https://i.imgur.com/NcaA71G.jpg","https://i.imgur.com/NcaA71G.jpg",null),
             new TextMessage($"Receive a text event message \nchannelId={channelId}  \nuserId={userId}")
         };
         return result;
     }
-
     public async Task<List<ISendMessage>> ProcessStickerEventMessageAsync(string channelId, string userId,string packageId, string stickerId)
     {
         var result = null as List<ISendMessage>;
