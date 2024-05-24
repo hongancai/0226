@@ -16,7 +16,16 @@ public class LineService : ILineService
         {
             result = new List<ISendMessage>
             {
-                new TextMessage("作者姓名 : 蔡閎安\n個人狀態 : 期末好累 要季了"),
+                new TextMessage("作者姓名 : 蔡閎安\n個人狀態 : 期末好累 要寄了"),
+            };
+            return result;
+        }
+        if (message == "發明者介紹")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/YO9M2SU.png","https://i.imgur.com/YO9M2SU.png",null),
+                new TextMessage("開發者: 阿茲米斯\n品種 : 蓋文星人\nOmnitrix發明者"),
             };
             return result;
         }
