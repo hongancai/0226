@@ -24,7 +24,7 @@ public class MemeService
             Console.WriteLine(exp);
             throw;
         }
-         
+        
         return result;
     }
 }
