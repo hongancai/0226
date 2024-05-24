@@ -12,6 +12,15 @@ public class LineService : ILineService
     {
         var result = null as List<ISendMessage>;
 
+        if (message == "作者資訊")
+        {
+            result = new List<ISendMessage>
+            {
+                new TextMessage("作者姓名 : 蔡閎安\n個人狀態 : 期末好累 要季了"),
+            };
+            return result;
+        }
+
         result = new List<ISendMessage>
         {
             new TextMessage($"Receive a text event message \nchannelId={channelId}  \nuserId={userId}")
