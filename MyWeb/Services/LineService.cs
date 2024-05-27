@@ -123,7 +123,7 @@ public class LineService : ILineService
         
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a text event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage("我不知道你說什麼😜")
         };
         return result;
     }
@@ -146,7 +146,7 @@ public class LineService : ILineService
 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a image event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage("我不知道你說什麼")
         };
         return result;
     }
@@ -157,7 +157,7 @@ public class LineService : ILineService
 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a image event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage("我不知道你什麼😜")
         };
         return result;
     }
@@ -190,7 +190,7 @@ public class LineService : ILineService
 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a location event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage("我不知道你說什麼😜")
         };
         return result;
     }
