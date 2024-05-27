@@ -29,7 +29,97 @@ public class LineService : ILineService
             };
             return result;
         }
-
+        if (message == "沼澤火")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/cfsOyCP.jpg","https://i.imgur.com/cfsOyCP.jpg",null),
+                new TextMessage("你變身成了沼澤火"),
+            };
+            return result;
+        }
+        if (message == "寒冰幽靈")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/LPUMdTI.jpg","https://i.imgur.com/LPUMdTI.jpg",null),
+                new TextMessage("你變身成了寒冰幽靈"),
+            };
+            return result;
+        }
+        if (message == "魟人")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/ocFms7O.jpg","https://i.imgur.com/ocFms7O.jpg",null),
+                new TextMessage("你變身成了魟人"),
+            };
+            return result;
+        }
+        if (message == "蟹甲智多星")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/jJ8BZ6y.jpg","https://i.imgur.com/jJ8BZ6y.jpg",null),
+                new TextMessage("你變身成了蟹甲智多星"),
+            };
+            return result;
+        }
+        if (message == "小波波")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/AiYZjGI.jpg","https://i.imgur.com/AiYZjGI.jpg",null),
+                new TextMessage("你變身成了小波波"),
+            };
+            return result;
+        }
+        if (message == "蜘蛛魔猴")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/BywTEUk.jpg","https://i.imgur.com/BywTEUk.jpg",null),
+                new TextMessage("你變身成了蜘蛛魔猴"),
+            };
+            return result;
+        }
+        if (message == "異形怪")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/7f6mF9r.png","https://i.imgur.com/7f6mF9r.png",null),
+                new TextMessage("你變身成了異形怪"),
+            };
+            return result;
+        }
+        if (message == "水晶奇俠")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/lB6IEdY.jpg","https://i.imgur.com/lB6IEdY.jpg",null),
+                new TextMessage("你變身成了水晶奇俠"),
+            };
+            return result;
+        }
+        if (message == "神力暴龍")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/UvV8lPb.jpg","https://i.imgur.com/UvV8lPb.jpg",null),
+                new TextMessage("你變身成了神力暴龍"),
+            };
+            return result;
+        }
+        if (message == "X超人")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/qgzVNsq.jpg","https://i.imgur.com/qgzVNsq.jpg",null),
+                new TextMessage("你變身成了X超人"),
+            };
+            return result;
+        }
+        
         result = new List<ISendMessage>
         {
             new TextMessage($"Receive a text event message \nchannelId={channelId}  \nuserId={userId}")
