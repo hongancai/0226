@@ -10,8 +10,32 @@ public class LineService : ILineService
 
     public async Task<List<ISendMessage>> ProcessTextEventMessageAsync(string channelId, string userId, string message)
     {
-        var result = null as List<ISendMessage>;
-
+        var result = new List<ISendMessage>();
+        if (message == "隨機變身")
+        {
+            string[] imageUrl = new string[]
+            {
+                "https://i.imgur.com/jJ8BZ6y.jpg",
+                "https://i.imgur.com/cfsOyCP.jpg",
+                "https://i.imgur.com/LPUMdTI.jpg",
+                "https://i.imgur.com/ocFms7O.jpg",
+                "https://i.imgur.com/gSxyf2B.jpg",
+                "https://i.imgur.com/AiYZjGI.jpg",
+                "https://i.imgur.com/7f6mF9r.png",
+                "https://i.imgur.com/BywTEUk.jpg",
+                "https://i.imgur.com/lB6IEdY.jpg",
+                "https://i.imgur.com/UvV8lPb.jpg",
+                "https://i.imgur.com/qgzVNsq.jpg",
+            };
+            Random rnd = new Random((int)DateTime.Now.TimeOfDay.TotalSeconds);
+            int index = rnd.Next(0, imageUrl.Length);
+            var imageMessage = new ImageMessage(imageUrl[index], imageUrl[index]);
+            // 將圖片訊息加入到回傳結果中
+            result.Add(imageMessage);
+            return result;
+        }
+        
+        
         if (message == "作者資訊")
         {
             result = new List<ISendMessage>
@@ -134,7 +158,7 @@ public class LineService : ILineService
 
         result = new List<ISendMessage>
         {
-            new TextMessage($"Receive a sticker event message \nchannelId={channelId}  \nuserId={userId}")
+            new TextMessage("我不知道你說什麼😜")
         };
         return result;
     }
@@ -146,7 +170,7 @@ public class LineService : ILineService
 
         result = new List<ISendMessage>
         {
-            new TextMessage("我不知道你說什麼")
+            new TextMessage("我不知道你說什麼😜")
         };
         return result;
     }
