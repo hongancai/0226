@@ -4,6 +4,7 @@ using Line.Messaging.Webhooks;
 
 public class LineService : ILineService
 {
+    private int lastSelectedIndex = -1;
     public LineService()
     {
     }
@@ -28,9 +29,14 @@ public class LineService : ILineService
                 "https://i.imgur.com/qgzVNsq.jpg",
             };
             Random rnd = new Random((int)DateTime.Now.TimeOfDay.TotalSeconds);
-            int index = rnd.Next(0, imageUrl.Length);
+            int index;
+            do
+            {
+                index = rnd.Next(0, imageUrl.Length);
+            } while (index == lastSelectedIndex);
+    
+            lastSelectedIndex = index;
             var imageMessage = new ImageMessage(imageUrl[index], imageUrl[index]);
-            // 將圖片訊息加入到回傳結果中
             result.Add(imageMessage);
             return result;
         }
