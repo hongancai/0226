@@ -20,7 +20,7 @@ public class LineService : ILineService
                 "https://i.imgur.com/LPUMdTI.jpg",
                 "https://i.imgur.com/ocFms7O.jpg",
                 "https://i.imgur.com/gSxyf2B.jpg",
-                "https://i.imgur.com/AiYZjGI.jpg",
+                "https://i.imgur.com/tevdtgJ.jpeg",
                 "https://i.imgur.com/7f6mF9r.png",
                 "https://i.imgur.com/BywTEUk.jpg",
                 "https://i.imgur.com/lB6IEdY.jpg",
@@ -41,7 +41,7 @@ public class LineService : ILineService
             result = new List<ISendMessage>
             {
                 new TextMessage("作者姓名 : 蔡閎安\n個人狀態 : 期末好累 要寄了🤢"),
-                new ImageMessage("\nhttps://i.imgur.com/BYFFcnC.gif","\nhttps://i.imgur.com/BYFFcnC.gif",null)
+                new ImageMessage("https://i.imgur.com/NscTPZK.png","https://i.imgur.com/NscTPZK.png",null)
             };
             return result;
         }
@@ -94,7 +94,7 @@ public class LineService : ILineService
         {
             result = new List<ISendMessage>
             {
-                new ImageMessage("https://i.imgur.com/AiYZjGI.jpg","https://i.imgur.com/AiYZjGI.jpg",null),
+                new ImageMessage("https://i.imgur.com/tevdtgJ.jpeg","https://i.imgur.com/tevdtgJ.jpeg",null),
                 new TextMessage("你變身成了小波波"),
             };
             return result;
