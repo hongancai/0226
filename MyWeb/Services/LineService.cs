@@ -150,7 +150,24 @@ public class LineService : ILineService
             };
             return result;
         }
-        
+        if (message == "X超人")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/qgzVNsq.jpg","https://i.imgur.com/qgzVNsq.jpg",null),
+                new TextMessage("你變身成了X超人"),
+            };
+            return result;
+        }
+        if (message == "超巨人")
+        {
+            result = new List<ISendMessage>
+            {
+                new ImageMessage("https://i.imgur.com/gSxyf2B.jpg","https://i.imgur.com/gSxyf2B.jpg",null),
+                new TextMessage("你變身成了超巨人"),
+            };
+            return result;
+        }
         result = new List<ISendMessage>
         {
             new TextMessage("我不知道你說什麼😜")
